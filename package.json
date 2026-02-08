@@ -3,12 +3,18 @@
   "version": "1.0.0",
   "description": "Campus Memory - The First Self-Learning College Platform",
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "cross-env TURBOPACK=false next dev",
+    "dev:turbo": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
-  "keywords": ["campus", "memory", "education", "ai"],
+  "keywords": [
+    "campus",
+    "memory",
+    "education",
+    "ai"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -27,6 +33,7 @@
     "@types/node": "^25.2.1",
     "@types/react": "^19.2.13",
     "@types/react-dom": "^19.2.3",
+    "cross-env": "^10.1.0",
     "eslint": "^9.39.2",
     "eslint-config-next": "^16.1.6",
     "postcss": "^8.5.6",

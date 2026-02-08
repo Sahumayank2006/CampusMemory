@@ -100,7 +100,7 @@ self.__SERVER_FILES_MANIFEST={
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\licsa\\OneDrive\\Desktop\\Mayank\\CampusMemory",
+    "outputFileTracingRoot": "C:\\Users\\dell\\Downloads\\CampusMemory\\CampusMemory",
     "cacheComponents": false,
     "cacheLife": {
       "default": {
@@ -157,7 +157,7 @@ self.__SERVER_FILES_MANIFEST={
       "proxyPrefetch": "flexible",
       "optimisticClientCache": true,
       "manualClientBasePath": false,
-      "cpus": 11,
+      "cpus": 7,
       "memoryBasedWorkersCount": false,
       "imgOptConcurrency": null,
       "imgOptTimeoutInSeconds": 7,
@@ -293,11 +293,11 @@ self.__SERVER_FILES_MANIFEST={
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.mjs",
     "turbopack": {
-      "root": "C:\\Users\\licsa\\OneDrive\\Desktop\\Mayank\\CampusMemory"
+      "root": "C:\\Users\\dell\\Downloads\\CampusMemory\\CampusMemory"
     },
     "distDirRoot": ".next"
   },
-  "appDir": "C:\\Users\\licsa\\OneDrive\\Desktop\\Mayank\\CampusMemory",
+  "appDir": "C:\\Users\\dell\\Downloads\\CampusMemory\\CampusMemory",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",

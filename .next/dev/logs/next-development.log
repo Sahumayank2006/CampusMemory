@@ -1,0 +1,209 @@
+[00:00:09.662] Server  LOG     ✓ Ready in 7.4s
+[00:00:12.948] Server  LOG     ○ Compiling / ...
+[00:00:14.807] Server  ERROR   ⨯ ReferenceError: document is not defined
+[00:00:15.357] Server  ERROR   ⨯ ./src/app/colleges/[id]/page.tsx:446:3
+Parsing ecmascript source code failed
+  444 |       )}
+  445 |     </main>
+> 446 |   );
+      |   ^
+  447 | }
+  448 |
+
+Expected '</', got ')'
+
+
+[00:00:16.795] Browser ERROR   uncaughtError: Error: ./src/app/colleges/[id]/page.tsx:446:3
+Parsing ecmascript source code failed
+  444 |       )}
+  445 |     </main>
+> 446 |   );
+      |   ^
+  447 | }
+  448 |
+
+Expected '</', got ')'
+
+
+[00:00:19.102] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:19.239] Browser ERROR   ./src/app/colleges/[id]/page.tsx:446:3
+Parsing ecmascript source code failed
+  444 |       )}
+  445 |     </main>
+> 446 |   );
+      |   ^
+  447 | }
+  448 |
+
+Expected '</', got ')'
+[00:00:20.054] Browser ERROR   ./src/app/colleges/[id]/page.tsx:446:3
+Parsing ecmascript source code failed
+  444 |       )}
+  445 |     </main>
+> 446 |   );
+      |   ^
+  447 | }
+  448 |
+
+Expected '</', got ')'
+[00:00:20.438] Browser ERROR   ./src/app/colleges/[id]/page.tsx:446:3
+Parsing ecmascript source code failed
+  444 |       )}
+  445 |     </main>
+> 446 |   );
+      |   ^
+  447 | }
+  448 |
+
+Expected '</', got ')'
+[00:00:20.438] Browser ERROR   ./src/app/colleges/[id]/page.tsx:446:3
+Parsing ecmascript source code failed
+  444 |       )}
+  445 |     </main>
+> 446 |   );
+      |   ^
+  447 | }
+  448 |
+
+Expected '</', got ')'
+[00:00:21.847] Browser ERROR   ./src/app/colleges/[id]/page.tsx:446:3
+Parsing ecmascript source code failed
+  444 |       )}
+  445 |     </main>
+> 446 |   );
+      |   ^
+  447 | }
+  448 |
+
+Expected '</', got ')'
+[00:01:02.544] Server  ERROR   ⨯ ReferenceError: document is not defined
+[00:01:03.253] Browser ERROR   ./src/app/colleges/[id]/page.tsx:446:3
+Parsing ecmascript source code failed
+  444 |       )}
+  445 |     </main>
+> 446 |   );
+      |   ^
+  447 | }
+  448 |
+
+Expected '</', got ')'
+[00:01:03.254] Browser ERROR   ./src/app/colleges/[id]/page.tsx:446:3
+Parsing ecmascript source code failed
+  444 |       )}
+  445 |     </main>
+> 446 |   );
+      |   ^
+  447 | }
+  448 |
+
+Expected '</', got ')'
+[00:01:04.342] Browser ERROR   ./src/app/colleges/[id]/page.tsx:446:3
+Parsing ecmascript source code failed
+  444 |       )}
+  445 |     </main>
+> 446 |   );
+      |   ^
+  447 | }
+  448 |
+
+Expected '</', got ')'
+[00:01:04.896] Browser ERROR   ./src/app/colleges/[id]/page.tsx:446:3
+Parsing ecmascript source code failed
+  444 |       )}
+  445 |     </main>
+> 446 |   );
+      |   ^
+  447 | }
+  448 |
+
+Expected '</', got ')'
+[00:01:04.896] Browser ERROR   ./src/app/colleges/[id]/page.tsx:446:3
+Parsing ecmascript source code failed
+  444 |       )}
+  445 |     </main>
+> 446 |   );
+      |   ^
+  447 | }
+  448 |
+
+Expected '</', got ')'
+[00:01:05.367] Browser ERROR   ./src/app/colleges/[id]/page.tsx:446:3
+Parsing ecmascript source code failed
+  444 |       )}
+  445 |     </main>
+> 446 |   );
+      |   ^
+  447 | }
+  448 |
+
+Expected '</', got ')'
+[00:01:07.638] Server  ERROR   ⨯ ReferenceError: document is not defined
+[00:01:07.811] Browser ERROR   ./src/app/colleges/[id]/page.tsx:446:3
+Parsing ecmascript source code failed
+  444 |       )}
+  445 |     </main>
+> 446 |   );
+      |   ^
+  447 | }
+  448 |
+
+Expected '</', got ')'
+[00:01:08.686] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:08.804] Browser ERROR   ./src/app/colleges/[id]/page.tsx:446:3
+Parsing ecmascript source code failed
+  444 |       )}
+  445 |     </main>
+> 446 |   );
+      |   ^
+  447 | }
+  448 |
+
+Expected '</', got ')'
+[00:01:08.962] Browser ERROR   ./src/app/colleges/[id]/page.tsx:446:3
+Parsing ecmascript source code failed
+  444 |       )}
+  445 |     </main>
+> 446 |   );
+      |   ^
+  447 | }
+  448 |
+
+Expected '</', got ')'
+[00:01:09.008] Browser ERROR   ./src/app/colleges/[id]/page.tsx:446:3
+Parsing ecmascript source code failed
+  444 |       )}
+  445 |     </main>
+> 446 |   );
+      |   ^
+  447 | }
+  448 |
+
+Expected '</', got ')'
+[00:01:09.170] Browser ERROR   ./src/app/colleges/[id]/page.tsx:446:3
+Parsing ecmascript source code failed
+  444 |       )}
+  445 |     </main>
+> 446 |   );
+      |   ^
+  447 | }
+  448 |
+
+Expected '</', got ')'
+[00:01:09.590] Browser ERROR   ./src/app/colleges/[id]/page.tsx:446:3
+Parsing ecmascript source code failed
+  444 |       )}
+  445 |     </main>
+> 446 |   );
+      |   ^
+  447 | }
+  448 |
+
+Expected '</', got ')'
+[00:01:47.158] Server  LOG     ✓ Compiled in 4s
+[00:01:59.788] Server  ERROR   ⨯ ReferenceError: localStorage is not defined
+[00:02:04.292] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:02:05.219] Server  LOG     ✓ Finished filesystem cache database compaction in 12.6s
+[00:03:13.624] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:58.262] Server  ERROR   ⨯ ReferenceError: localStorage is not defined
+[00:03:58.996] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:07:56.363] Server  LOG     ✓ Compiled in 211ms

@@ -64,9 +64,13 @@ export default function HomePage() {
   const [scrollY, setScrollY] = useState(0);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [activeSection, setActiveSection] = useState(0);
+  const [mounted, setMounted] = useState(false);
   const heroRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Fix hydration error by only rendering particles after mount
+    setMounted(true);
+
     // Load colleges from localStorage
     const storedColleges = localStorage.getItem("campusMemoryColleges");
     if (storedColleges) {
@@ -185,111 +189,115 @@ export default function HomePage() {
         </div>
 
         {/* Enhanced Multi-Layer Particle System */}
-        <div className="absolute inset-0 z-10">
-          {/* Large Golden Particles */}
-          {[...Array(30)].map((_, i) => (
-            <motion.div
-              key={`gold-${i}`}
-              className="absolute rounded-full bg-[#D4AF37]"
-              style={{
-                width: `${Math.random() * 6 + 2}px`,
-                height: `${Math.random() * 6 + 2}px`,
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                y: [0, -100, 0],
-                x: [0, Math.random() * 50 - 25, 0],
-                opacity: [0.2, 0.8, 0.2],
-                scale: [1, 1.5, 1],
-              }}
-              transition={{
-                duration: Math.random() * 10 + 10,
-                repeat: Infinity,
-                delay: Math.random() * 5,
-                ease: "easeInOut"
-              }}
-            ></motion.div>
-          ))}
-          
-          {/* White Sparkle Particles */}
-          {[...Array(60)].map((_, i) => (
-            <motion.div
-              key={`white-${i}`}
-              className="absolute w-1 h-1 bg-white rounded-full"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                y: [0, -150],
-                opacity: [0, 1, 0],
-                scale: [0, 1, 0],
-              }}
-              transition={{
-                duration: Math.random() * 8 + 5,
-                repeat: Infinity,
-                delay: Math.random() * 5,
-                ease: "linear"
-              }}
-            ></motion.div>
-          ))}
-
-          {/* Green Emerald Particles */}
-          {[...Array(20)].map((_, i) => (
-            <motion.div
-              key={`green-${i}`}
-              className="absolute rounded-full bg-[#059669]"
-              style={{
-                width: `${Math.random() * 4 + 2}px`,
-                height: `${Math.random() * 4 + 2}px`,
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                y: [0, Math.random() * -80, 0],
-                x: [0, Math.random() * 40 - 20, 0],
-                opacity: [0.3, 0.9, 0.3],
-              }}
-              transition={{
-                duration: Math.random() * 8 + 8,
-                repeat: Infinity,
-                delay: Math.random() * 4,
-                ease: "easeInOut"
-              }}
-            ></motion.div>
-          ))}
-        </div>
-
-        {/* Floating Geometric Shapes */}
-        <div className="absolute inset-0 pointer-events-none z-10">
-          {[...Array(8)].map((_, i) => {
-            const shapes = [Hexagon, Circle, Triangle];
-            const ShapeIcon = shapes[i % shapes.length];
-            return (
+        {mounted && (
+          <div className="absolute inset-0 z-10">
+            {/* Large Golden Particles */}
+            {[...Array(30)].map((_, i) => (
               <motion.div
-                key={`shape-${i}`}
-                className="absolute text-white/10"
+                key={`gold-${i}`}
+                className="absolute rounded-full bg-[#D4AF37]"
+                style={{
+                  width: `${Math.random() * 6 + 2}px`,
+                  height: `${Math.random() * 6 + 2}px`,
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                }}
+                animate={{
+                  y: [0, -100, 0],
+                  x: [0, Math.random() * 50 - 25, 0],
+                  opacity: [0.2, 0.8, 0.2],
+                  scale: [1, 1.5, 1],
+                }}
+                transition={{
+                  duration: Math.random() * 10 + 10,
+                  repeat: Infinity,
+                  delay: Math.random() * 5,
+                  ease: "easeInOut"
+                }}
+              ></motion.div>
+            ))}
+            
+            {/* White Sparkle Particles */}
+            {[...Array(60)].map((_, i) => (
+              <motion.div
+                key={`white-${i}`}
+                className="absolute w-1 h-1 bg-white rounded-full"
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
                 }}
                 animate={{
-                  rotate: [0, 360],
-                  scale: [1, 1.2, 1],
-                  opacity: [0.1, 0.3, 0.1],
+                  y: [0, -150],
+                  opacity: [0, 1, 0],
+                  scale: [0, 1, 0],
                 }}
                 transition={{
-                  duration: 20 + Math.random() * 10,
+                  duration: Math.random() * 8 + 5,
                   repeat: Infinity,
                   delay: Math.random() * 5,
+                  ease: "linear"
                 }}
-              >
-                <ShapeIcon size={60 + Math.random() * 40} strokeWidth={1} />
-              </motion.div>
-            );
-          })}
-        </div>
+              ></motion.div>
+            ))}
+
+            {/* Green Emerald Particles */}
+            {[...Array(20)].map((_, i) => (
+              <motion.div
+                key={`green-${i}`}
+                className="absolute rounded-full bg-[#059669]"
+                style={{
+                  width: `${Math.random() * 4 + 2}px`,
+                  height: `${Math.random() * 4 + 2}px`,
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                }}
+                animate={{
+                  y: [0, Math.random() * -80, 0],
+                  x: [0, Math.random() * 40 - 20, 0],
+                  opacity: [0.3, 0.9, 0.3],
+                }}
+                transition={{
+                  duration: Math.random() * 8 + 8,
+                  repeat: Infinity,
+                  delay: Math.random() * 4,
+                  ease: "easeInOut"
+                }}
+              ></motion.div>
+            ))}
+          </div>
+        )}
+
+        {/* Floating Geometric Shapes */}
+        {mounted && (
+          <div className="absolute inset-0 pointer-events-none z-10">
+            {[...Array(8)].map((_, i) => {
+              const shapes = [Hexagon, Circle, Triangle];
+              const ShapeIcon = shapes[i % shapes.length];
+              return (
+                <motion.div
+                  key={`shape-${i}`}
+                  className="absolute text-white/10"
+                  style={{
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`,
+                  }}
+                  animate={{
+                    rotate: [0, 360],
+                    scale: [1, 1.2, 1],
+                    opacity: [0.1, 0.3, 0.1],
+                  }}
+                  transition={{
+                    duration: 20 + Math.random() * 10,
+                    repeat: Infinity,
+                    delay: Math.random() * 5,
+                  }}
+                >
+                  <ShapeIcon size={60 + Math.random() * 40} strokeWidth={1} />
+                </motion.div>
+              );
+            })}
+          </div>
+        )}
 
         {/* Subtle gradient overlay - no animated elements */}
         <div className="absolute inset-0 z-10">
@@ -429,7 +437,7 @@ export default function HomePage() {
                   </motion.div>
 
                   {/* Sparkles */}
-                  {[...Array(3)].map((_, i) => (
+                  {mounted && [...Array(3)].map((_, i) => (
                     <motion.div
                       key={i}
                       className="absolute w-2 h-2 bg-white rounded-full"
@@ -1228,21 +1236,23 @@ export default function HomePage() {
       {/* SECTION 3: GRADUATION SHOULDN'T MEAN AMNESIA - 2022 to 2026 */}
       <section className="py-32 bg-gradient-to-br from-[#1E3A8A]/5 via-purple-50 to-[#059669]/5 relative overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0">
-          {[...Array(20)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-2 h-2 bg-gray-300 rounded-full animate-float-slow"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 5}s`,
-                animationDuration: `${10 + Math.random() * 10}s`,
-                opacity: 0.3
-              }}
-            ></div>
-          ))}
-        </div>
+        {mounted && (
+          <div className="absolute inset-0">
+            {[...Array(20)].map((_, i) => (
+              <div
+                key={i}
+                className="absolute w-2 h-2 bg-gray-300 rounded-full animate-float-slow"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 5}s`,
+                  animationDuration: `${10 + Math.random() * 10}s`,
+                  opacity: 0.3
+                }}
+              ></div>
+            ))}
+          </div>
+        )}
 
         <div className="mx-auto max-w-6xl px-6 lg:px-8 text-center relative z-10">
           {/* Redesigned Header */}
